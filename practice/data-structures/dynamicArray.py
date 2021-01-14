@@ -1,10 +1,7 @@
 class DynamicArray:
     def __init__(self):
-        # actual number of elements in dynamic array
-        self._size = 0
-        # maximum capacity of the dynamic array
-        self._capacity = 1
-
+        self._size = 0          # actual number of elements in dynamic array
+        self._capacity = 1      # maximum capacity of the dynamic array
         self.array = self._create_array(self._capacity)
     def _create_array(self, capacity) -> list :
         '''
@@ -75,7 +72,7 @@ class DynamicArray:
 
         Returns
         -------
-        item:
+        Item:
             The element at the specific index.
         
         Raises
@@ -92,9 +89,9 @@ class DynamicArray:
 
         Parameters
         ----------
-        item:
+        Item:
             The element wants to put into the array.
-        index (int):
+        Index (int):
             The index you want to put into the element.
         
         Raises
@@ -118,7 +115,7 @@ class DynamicArray:
 
         Parameters
         ----------
-        index (int):
+        Index (int):
             The index you want to remove the element.
         
         Returns
@@ -138,5 +135,4 @@ class DynamicArray:
                 self.array[i] = self.array[i+1]
             self.array[self._size] = None
             return item
-        else:
-            raise IndexError("Invalid index")
+        raise IndexError("Invalid index")
