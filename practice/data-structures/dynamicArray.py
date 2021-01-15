@@ -136,3 +136,45 @@ class DynamicArray:
             self.array[self._size] = None
             return item
         raise IndexError("Invalid index")
+    def is_empty(self) -> bool :
+        '''
+        Check the array is empty or not.
+
+        Returns
+        -------
+        bool:
+            If the array is empty return true, else return false.
+        '''
+        return self._size == 0
+    def prepend(self,  item):
+        '''
+        Insert the item into the index 0 of the array.
+
+        Parameters
+        ----------
+        item:
+            The element wants to insert at the index 0 of the array.
+        '''
+        if (self._size >= self._capacity):
+            self._resize()
+        self._size += 1
+        for i in range(self._size, 0, -1):
+            self.array[i] = self.array[i-1]
+        self.array[0] = item
+    def find(self, item):
+        '''
+        Find out the index of item if the item is in the array.
+
+        Parameters
+        ----------
+        item:
+            The element which wants to know the index of it.
+
+        Returns
+        -------
+            If the item in the array, reutrn the element of the index, else return -1.
+        '''
+        for i in range(self._size):
+            if self.array[i] == item:
+                return i
+        return -1
