@@ -3,7 +3,7 @@ class DynamicArray:
         self._size = 0          # actual number of elements in dynamic array
         self._capacity = 1      # maximum capacity of the dynamic array
         self.array = self._create_array(self._capacity)
-    def _create_array(self, capacity) -> list :
+    def _create_array(self, capacity: int) -> list :
         '''
         Private function
         Create a new array with capacity
@@ -29,26 +29,26 @@ class DynamicArray:
             The length of the array.
         '''
         return self._size
-    def append(self, item) -> None :
+    def append(self, item: int) -> None :
         '''
         Add a item to the end of the array
 
         Parameters
         ----------
-        Item: 
+        Item (int): 
             The element will be added to the end of the array.
         '''
         if (self._size >= self._capacity):
             self._resize()
         self.array[self._size] = item
         self._size += 1
-    def pop(self):
+    def pop(self) -> int:
         '''
         Pop the last item from the end of the array.
 
         Returns
         -------
-        Item:
+        Item (int):
             The element is from the end of the array.
         
         Raises
@@ -61,7 +61,7 @@ class DynamicArray:
             item, self.array[self._size] = self.array[self._size], None
             return item
         raise IndexError("There is no element in the array")
-    def get_item(self, index):
+    def get_item(self, index: int) -> int:
         '''
         Get element at given index.
 
@@ -72,7 +72,7 @@ class DynamicArray:
 
         Returns
         -------
-        Item:
+        Item (int):
             The element at the specific index.
         
         Raises
@@ -83,13 +83,13 @@ class DynamicArray:
         if(index>= 0 and self._size > index):
             return self.array[index]
         raise IndexError("Invalid index")
-    def insert(self, item, index) -> None:
+    def insert(self, item: int, index: int) -> None:
         '''
         Put the item at the specific index of the array.
 
         Parameters
         ----------
-        Item:
+        Item (int):
             The element wants to put into the array.
         Index (int):
             The index you want to put into the element.
@@ -109,7 +109,7 @@ class DynamicArray:
                 self.array[i] = old_array[i-1]
         else:
             raise IndexError("Invalid index")
-    def remove_at(self, index):
+    def remove_at(self, index: int) -> int:
         '''
         Remove the element at specific index from the array.
 
@@ -120,7 +120,7 @@ class DynamicArray:
         
         Returns
         -------
-        item:
+        Item (int):
             The element is from the specific index of the array.
         
         Raises
@@ -146,7 +146,7 @@ class DynamicArray:
             If the array is empty return true, else return false.
         '''
         return self._size == 0
-    def prepend(self,  item):
+    def prepend(self,  item: int) -> None:
         '''
         Insert the item into the index 0 of the array.
 
@@ -161,7 +161,7 @@ class DynamicArray:
         for i in range(self._size, 0, -1):
             self.array[i] = self.array[i-1]
         self.array[0] = item
-    def find(self, item):
+    def find(self, item: int) -> int:
         '''
         Find out the index of item if the item is in the array.
 
