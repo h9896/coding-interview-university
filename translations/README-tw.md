@@ -520,12 +520,12 @@
         這個頁面僅提供基本對於指標的指標的認識。我不推薦這個遍歷linked list的方式，因為他用的方式太過神奇，所以可讀性以及維護性並不好。
         - [Pointers to Pointers](https://www.eskimo.com/~scs/cclass/int/sx8.html)
     - [ ] 實作Linked list (我做了有末端指標(tail pointer)的版本以及無末端指標的版本):
-        - [ ] size() - 回傳linked list裡面的元素個數
-        - [ ] empty() - 回傳型態:bool，如果linked list為空，回傳true
+        - [x] size() - 回傳linked list裡面的元素個數
+        - [x] empty() - 回傳型態:bool，如果linked list為空，回傳true
         - [ ] value_at(index) - 回傳索引值為index的元素的數值，第一個元素索引值為0，以此類推
-        - [ ] push_front(value) - 從linked list的起始點加入新的元素
+        - [x] push_front(value) - 從linked list的起始點加入新的元素
         - [ ] pop_front() - 移除第一個元素，並且回傳該元素的數值
-        - [ ] push_back(value) - 在linked list末端加入新元素
+        - [x] push_back(value) - 在linked list末端加入新元素
         - [ ] pop_back() - 移除最後一個元素，並且回傳該元素的數值
         - [ ] front() - 回傳第一個元素的數值
         - [ ] back() - 回傳最後一個元素的數值
