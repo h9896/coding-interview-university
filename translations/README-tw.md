@@ -524,12 +524,12 @@
         - [x] empty() - 回傳型態:bool，如果linked list為空，回傳true
         - [ ] value_at(index) - 回傳索引值為index的元素的數值，第一個元素索引值為0，以此類推
         - [x] push_front(value) - 從linked list的起始點加入新的元素
-        - [ ] pop_front() - 移除第一個元素，並且回傳該元素的數值
+        - [x] pop_front() - 移除第一個元素，並且回傳該元素的數值
         - [x] push_back(value) - 在linked list末端加入新元素
-        - [ ] pop_back() - 移除最後一個元素，並且回傳該元素的數值
-        - [ ] front() - 回傳第一個元素的數值
-        - [ ] back() - 回傳最後一個元素的數值
-        - [ ] insert(index, value) - 把新元素插入到該索引值，而新元素指向原本在該索引值的元素。
+        - [x] pop_back() - 移除最後一個元素，並且回傳該元素的數值
+        - [x] front() - 回傳第一個元素的數值
+        - [x] back() - 回傳最後一個元素的數值
+        - [x] insert(index, value) - 把新元素插入到該索引值，而新元素指向原本在該索引值的元素。
         - [ ] erase(index) - 刪除該索引值的元素(節點)
         - [ ] value_n_from_end(n) - 回傳從末端開始計算的第n個元素的數值
         - [ ] reverse() - 反轉該linked list
