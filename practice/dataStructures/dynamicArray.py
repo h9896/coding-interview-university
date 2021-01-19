@@ -157,10 +157,10 @@ class DynamicArray:
         '''
         if (self._size >= self._capacity):
             self._resize()
-        self._size += 1
         for i in range(self._size, 0, -1):
             self.array[i] = self.array[i-1]
         self.array[0] = item
+        self._size += 1
     def find(self, item: int) -> int:
         '''
         Find out the index of item if the item is in the array.
