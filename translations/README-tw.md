@@ -522,7 +522,7 @@
     - [ ] 實作Linked list (我做了有末端指標(tail pointer)的版本以及無末端指標的版本):
         - [x] size() - 回傳linked list裡面的元素個數
         - [x] empty() - 回傳型態:bool，如果linked list為空，回傳true
-        - [ ] value_at(index) - 回傳索引值為index的元素的數值，第一個元素索引值為0，以此類推
+        - [x] value_at(index) - 回傳索引值為index的元素的數值，第一個元素索引值為0，以此類推
         - [x] push_front(value) - 從linked list的起始點加入新的元素
         - [x] pop_front() - 移除第一個元素，並且回傳該元素的數值
         - [x] push_back(value) - 在linked list末端加入新元素
@@ -530,18 +530,18 @@
         - [x] front() - 回傳第一個元素的數值
         - [x] back() - 回傳最後一個元素的數值
         - [x] insert(index, value) - 把新元素插入到該索引值，而新元素指向原本在該索引值的元素。
-        - [ ] erase(index) - 刪除該索引值的元素(節點)
-        - [ ] value_n_from_end(n) - 回傳從末端開始計算的第n個元素的數值
-        - [ ] reverse() - 反轉該linked list
-        - [ ] remove_value(value) - 刪除第一個為該數值的元素(意即7 2 2 1，要刪除2的話，只刪除index:1的那個2)
-    - [ ] 雙向linked List
+        - [x] erase(index) - 刪除該索引值的元素(節點)
+        - [x] value_n_from_end(n) - 回傳從末端開始計算的第n個元素的數值
+        - [x] reverse() - 反轉該linked list
+        - [x] remove_value(value) - 刪除第一個為該數值的元素(意即7 2 2 1，要刪除2的話，只刪除index:1的那個2)
+    - [x] 雙向linked List
         - [背後原理(影片)](https://www.coursera.org/learn/data-structures/lecture/jpGKD/doubly-linked-lists)
         - 不需實作
 
 - ### Stack(堆疊)
-    - [ ] [Stacks(影片)](https://www.coursera.org/learn/data-structures/lecture/UdKzQ/stacks)
-    - [ ] [使用Stacks先進後出(Last-In First-Out)(影片)](https://archive.org/details/0102WhatYouShouldKnow/05_01-usingStacksForLast-inFirst-out.mp4)
-    - [ ] 無須實作，可以用陣列實作，但這樣太過簡單了。
+    - [x] [Stacks(影片)](https://www.coursera.org/learn/data-structures/lecture/UdKzQ/stacks)
+    - [x] [使用Stacks先進後出(Last-In First-Out)(影片)](https://archive.org/details/0102WhatYouShouldKnow/05_01-usingStacksForLast-inFirst-out.mp4)
+    - [x] 無須實作，可以用陣列實作，但這樣太過簡單了。
 
 - ### Queue(佇列)
     - [ ] [使用Queues(先進先出)First-In First-Out(影片)](https://archive.org/details/0102WhatYouShouldKnow/05_03-usingQueuesForFirst-inFirst-out.mp4)
