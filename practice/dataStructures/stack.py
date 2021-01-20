@@ -1,9 +1,4 @@
-class Node:
-    def __init__(self, val: int):
-        self.next = None
-        self.val = val
-    def nextNode(self, next: Node):
-        self.next = next
+from practice.dataStructures.node import Node
 
 class Stack:
     def __init__(self):

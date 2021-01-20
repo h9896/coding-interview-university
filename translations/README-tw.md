@@ -544,14 +544,14 @@
     - [x] 無須實作，可以用陣列實作，但這樣太過簡單了。
 
 - ### Queue(佇列)
-    - [ ] [使用Queues(先進先出)First-In First-Out(影片)](https://archive.org/details/0102WhatYouShouldKnow/05_03-usingQueuesForFirst-inFirst-out.mp4)
-    - [ ] [Queue(影片)](https://www.coursera.org/lecture/data-structures/queues-EShpq)
+    - [x] [使用Queues(先進先出)First-In First-Out(影片)](https://archive.org/details/0102WhatYouShouldKnow/05_03-usingQueuesForFirst-inFirst-out.mp4)
+    - [x] [Queue(影片)](https://www.coursera.org/lecture/data-structures/queues-EShpq)
     - [ ] [Circular buffer/FIFO](https://en.wikipedia.org/wiki/Circular_buffer)
     - [ ] [Priority Queues(影片)](https://archive.org/details/0102WhatYouShouldKnow/05_04-priorityQueuesAndDeques.mp4)
-    - [ ] 使用linked list實作，包含末端指標(tail pointer):
-        - enqueue(value) - 在queue末端加入元素
-        - dequeue() - 刪除當時queue中最早進入的元素(意即queue中第一個元素)，並且回傳該元素的值。
-        - empty()
+    - [x] 使用linked list實作，包含末端指標(tail pointer):
+        - [x] enqueue(value) - 在queue末端加入元素
+        - [x] dequeue() - 刪除當時queue中最早進入的元素(意即queue中第一個元素)，並且回傳該元素的值。
+        - [x] empty()
         - full()
     - [ ] 複雜度:
         - 

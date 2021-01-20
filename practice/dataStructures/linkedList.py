@@ -1,3 +1,4 @@
+from practice.dataStructures.node import Node
 class LinkedList:
     def __init__(self):
         self._size = 0
@@ -23,7 +24,7 @@ class LinkedList:
             new_node.next = self.head
             self.head = new_node
         self._size += 1
-    def pop_back(self) -> Node:
+    def pop_back(self) -> int:
         if self.is_empty():
             raise IndexError("There is no element in the array")
         else:
@@ -35,24 +36,26 @@ class LinkedList:
                     trav1.next = None
                     self.tail = trav1
                     self._size -= 1
-                    return item
+                    return item.val
                 trav1 = trav2.next
             self._size -= 1
             self.head = None
             self.tail = None
-            return trav1
-    def pop_front(self) -> Node:
+            return trav1.val
+    def pop_front(self) -> int:
         if self.is_empty():
             raise IndexError("There is no element in the array")
         else:
             item = self.head
             self.head = item.next
             self._size -= 1
-            return item
-    def front(self) -> Node:
-        return self.head
-    def back(self) -> Node:
-        return self.tail
+            if self.is_empty():
+                self.tail = None
+            return item.val
+    def front(self) -> int:
+        return self.head.val
+    def back(self) -> int:
+        return self.tail.val
     def insert(self, index: int, item: int) -> None:
         if self._size < index:
             raise IndexError("There is no element in the array")
@@ -129,7 +132,7 @@ class LinkedList:
             preced = curr.next
         curr.next = pre
         self.head = curr
-    def remove_value(self, val) -> Node:
+    def remove_value(self, val) -> int:
         pre = None
         curr = self.head
         for _ in range(self._size):
@@ -137,14 +140,7 @@ class LinkedList:
                 temp = curr
                 pre.next = curr.next
                 self._size -= 1
-                return temp
+                return temp.val
             pre = curr
             curr = curr.next
         raise IndexError("There is no element in the array")
-class Node:
-    def __init__(self, val: int):
-        self.next = None
-        self.val = val
-    def nextNode(self, next: Node):
-        self.next = next
-
