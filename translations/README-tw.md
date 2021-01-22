@@ -589,10 +589,10 @@
 ## 更多
 
 - ### 二分搜尋法(Binary Search)
-    - [ ] [二分搜尋法(影片)](https://www.youtube.com/watch?v=D5SrAga1pno)
-    - [ ] [二分搜尋法(影片)](https://www.khanacademy.org/computing/computer-science/algorithms/binary-search/a/binary-search)
-    - [ ] [細節](https://www.topcoder.com/community/competitive-programming/tutorials/binary-search/)
-    - [ ] 實作:
+    - [x] [二分搜尋法(影片)](https://www.youtube.com/watch?v=D5SrAga1pno)
+    - [x] [二分搜尋法(影片)](https://www.khanacademy.org/computing/computer-science/algorithms/binary-search/a/binary-search)
+    - [x] [細節](https://www.topcoder.com/community/competitive-programming/tutorials/binary-search/)
+    - [x] 實作:
         - 二分搜尋法 (對已經排列好的數列)
         - 用遞迴(recursion)的方法實作二分搜尋法
 
