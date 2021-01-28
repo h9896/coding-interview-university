@@ -50,6 +50,10 @@ class BinarySearch:
                 current_node.val = temp_node.val
                 current_node.right = self.recurse_remove(current_node.right, temp_node.val)
         return current_node
+    def recurse_height(self, node: TreeNode):
+        if node == None:
+            return 0
+        return max(self.recurse_height(node.left), self.recurse_height(node.right)) + 1
     def preorder(self, node: TreeNode):
         if node == None:
             return
@@ -101,6 +105,8 @@ class BinarySearch:
             self._size -= 1
             return True
         return False
+    def heigh(self) -> int:
+        return self.recurse_height(self.root)
     def travesal(self, travesal_type: str):
         if travesal_type.upper() == "PREORDER":
             self.preorder(self.root)
