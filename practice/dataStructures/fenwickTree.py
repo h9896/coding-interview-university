@@ -1,9 +1,9 @@
 class FewnickTree:
-    def __init__(self, array: [int]):
+    def __init__(self, array: list[int]):
         self.data = array
         self.size = len(array)
         self.tree = self.construction()
-    def construction(self) -> [int]:
+    def construction(self) -> list[int]:
         '''
         complexity: O(n)
         '''
