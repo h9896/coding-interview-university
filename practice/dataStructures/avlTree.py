@@ -26,6 +26,14 @@ class AVLTree:
         self.root = self.__insert(self.root, value)
         self.nodeCount += 1
         return True
+    def remove(self, value):
+        if value == None:
+            return False
+        if self.contains(self.root, value):
+            self.root = self.__remove(self.root, value)
+            self.nodeCount -= 1
+            return True
+        return False
     def __insert(self, node, value):
         if node == None:
             return Node(value)
@@ -36,7 +44,27 @@ class AVLTree:
             node.right = self.__insert(node.right, value)
         self.__update(node)
         return self.__balance(node)
-    
+    def __remove(self, node, value):
+        if node == None:
+            return None
+        cmp = self.__compare(value, node.val)
+        if cmp < 0:
+            node.left = self.__remove(node.left, value)
+        elif cmp > 0:
+            node.right = self.__remove(node.right, value)
+        else:
+            if node.left == None:
+                return node.right
+            elif node.right == None:
+                return node.left
+            else:
+                temp_node = node.right
+                while temp_node.left is not None:
+                    temp_node = temp_node.left
+                node.val = temp_node.val
+                node.right = self.__remove(node.right, temp_node.val)
+        self.__update(node)
+        return self.__balance(node)
     def __compare(self, val1, val2):
         return val1-val2
     def __update(self, node):
